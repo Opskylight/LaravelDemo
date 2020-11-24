@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InspiringController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::get('/about_us', function () {
     return view('about_us', ['name' => 'Laravel 6.0 範例']);
 
 });
+
+Route::get('/inspire', 'App\Http\Controllers\InspiringController@inspire');
