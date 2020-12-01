@@ -31,3 +31,13 @@ Route::get('/about_us', function () {
 });
 
 Route::get('/inspire', 'App\Http\Controllers\InspiringController@inspire');
+
+Route::get('/test', function(){
+    return App\Models\Post::all();
+});
+Route::get('/edit', function(){
+    $post = App\Models\Post::find(1);
+    $post->content = 'Laravel demo';
+    $post->save();
+    return $post;
+});
